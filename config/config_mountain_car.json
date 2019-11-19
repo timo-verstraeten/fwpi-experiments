@@ -1,0 +1,31 @@
+{
+  "policy_iteration": {
+    "n_support": 200,
+    "convergence_threshold": 1e-5,
+    "max_iter": 20,
+    "gpdm": {
+      "noise_var": 1e-8,
+      "sparse": 1
+    },
+    "gp_val": {
+      "noise_var": 1e-1
+    }
+  },
+  "environment": {
+    "s_bounds": [[-1.1, 0.55, 21], [-1, 1, 21]],
+    "a_bounds": [[-1, 1, 21]],
+    "gamma": 0.99,
+    "reward_index": [0, 1],
+    "reward_goal": [0.45, 0.0],
+    "reward_scale": [0.05, 0.05],
+    "n_samples": [20, 100, 100],
+    "params": [
+      {"power": 0.0015},
+      {"power": 0.001},
+      {"power": 0.0001}
+    ]
+  },
+  "experiment": {
+    "max_iter": 200
+  }
+}
