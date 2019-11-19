@@ -31,7 +31,7 @@ def execute_policy(policy, env, max_iter, render=False):
 
 def main():
     parser = argparse.ArgumentParser(description=None)
-    parser.add_argument('--env_id', default='mountain_car', help='Select an environment')
+    parser.add_argument('--env_id', default='mountain_car', help='Select an environment (mountain_car / cart_pole / wind_farm)')
     parser.add_argument('--agent_type', default='single', help='Select an agent type (single / joint / fleet)')
     parser.add_argument('--seed', default=1, type=int, help='Seed for randomizers')
     args = parser.parse_args()
