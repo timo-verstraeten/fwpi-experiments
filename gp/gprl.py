@@ -42,7 +42,7 @@ class GPDM:
             if self.sparse:
                 kernel = FleetConstant(input_dim=Dx, num_outputs=M, kernel=kernel, name='coreg')
             else:
-                W_rank = 1
+                W_rank = M
                 kernel = GPy.util.multioutput.ICM(input_dim=Dx, num_outputs=M, kernel=kernel, W_rank=W_rank, name='coreg')
             gp = GPy.models.GPCoregionalizedRegression(X_list=X_list, Y_list=[Y[:,[d]] for Y in Y_list], kernel=kernel)
             for m in range(M):
